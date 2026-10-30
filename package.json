@@ -1,0 +1,29 @@
+{
+  "name": "student-skills-swap-platform",
+  "version": "1.0.0",
+  "description": "A startup-grade web platform for students to exchange their skills peer-to-peer without money.",
+  "main": "server/src/server.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue.bold,magenta.bold\" \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "npm run build --prefix client",
+    "build": "npm run build:client",
+    "start": "node server/src/server.js"
+  },
+  "keywords": [
+    "student-skills-swap",
+    "peer-to-peer-learning",
+    "skills-exchange",
+    "react",
+    "express",
+    "supabase",
+    "tailwind"
+  ],
+  "author": "kumarisonam000126-ctrl",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
